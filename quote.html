@@ -886,7 +886,7 @@ async function submitQuote(){
     preferred_contact:getVal('s5-contact'), notes:getVal('s3-notes')||'None'
   };
   try{
-    var res=await fetch('https://formspree.io/f/xdkogqnb',{
+    var res=await fetch('https://formspree.io/f/mzepppvl',{
       method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(payload)
     });
