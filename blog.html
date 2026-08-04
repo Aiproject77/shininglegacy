@@ -781,7 +781,7 @@ function filterBlog(btn,cat){
 async function submitNL(e){
   e.preventDefault();
   var em=document.getElementById('nl-email').value;
-  try{await fetch('https://formspree.io/f/xdkogqnb',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Newsletter Blog',email:em})});}catch(x){}
+  try{await fetch('https://formspree.io/f/mzepppvl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Newsletter Blog',email:em})});}catch(x){}
   document.getElementById('nl-msg').style.display='block';
   document.getElementById('nl-email').value='';
 }
