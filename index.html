@@ -537,6 +537,18 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
 .answer-box{background:#f0f7ff;border:1.5px solid rgba(41,171,226,.35);border-left:5px solid #29ABE2;border-radius:10px;padding:18px 22px;margin:0 0 32px}
 .answer-box .tip-box-title,.answer-box strong.ab-title{display:block;font-family:Poppins,sans-serif;font-weight:700;color:#1A3A5C;margin-bottom:6px;font-size:.88rem;text-transform:uppercase;letter-spacing:.05em}
 .answer-box p{margin:0!important}
+.svc-img,.bci,.blog-card-img,.ab-big,.ab-sm{width:100%;align-self:stretch}
+.svc-img img,.bci img,.blog-card-img img,.ab-big img,.ab-sm img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;display:block}
+.svc-card,.blog-card{min-width:0}
+@media(max-width:900px){
+  .hero{min-height:auto!important}
+  .hero>.container,section [style*="grid-template-columns:1.1fr 1fr"],section [style*="grid-template-columns:1.2fr 1fr"],section [style*="grid-template-columns:1fr 1.1fr"]{grid-template-columns:1fr!important;gap:36px!important}
+  .hero>.container{padding:48px 20px 64px!important}
+  .hero>.container>div:last-child>div:last-child{left:12px!important;bottom:-18px!important;max-width:240px!important}
+  .hero h1{font-size:clamp(2rem,8.5vw,2.6rem)!important}
+}
+@media(max-width:900px){section [style*="grid-template-columns:repeat(3,1fr)"],section [style*="grid-template-columns:repeat(4,1fr)"]:not(#service-area *){grid-template-columns:1fr 1fr!important}}
+@media(max-width:768px){section [style*="grid-template-columns:1fr 1fr"]:not(.about-imgs),section [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}}
 .faq-block{padding:0!important;background:none!important}.faq-block h3{font-size:1.02rem!important;margin-top:22px!important}
 </style>
 </head>
