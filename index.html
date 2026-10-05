@@ -55,7 +55,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --green:#5CB85C;--green-dk:#4A9B4A;--green-lt:#EAF5EA;
+  --green:#5CB85C;--green-dk:#4A9B4A;--green-text:#2E7D32;--green-lt:#EAF5EA;
   --blue:#29ABE2;--blue-dk:#1A8BBF;
   --navy:#1A3A5C;--navy2:#1E4470;
   --white:#fff;--off:#F4F9F4;--card:#fff;
@@ -122,7 +122,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:var(--nav-h);
 /* SECTION COMMONS */
 section{padding:88px 0}
 .sec-eyebrow{display:flex;align-items:center;gap:8px;font-family:"Poppins",sans-serif;
-  font-size:.7rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+  font-size:.7rem;font-weight:700;color:var(--green-text);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
 .sec-eyebrow::before{content:"";width:24px;height:2px;background:var(--green);border-radius:2px}
 .sec-title{font-size:clamp(1.7rem,3.2vw,2.4rem);color:var(--navy);font-weight:800;margin-bottom:14px;line-height:1.2}
 .sec-sub{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:min(580px,100%)}
@@ -223,7 +223,7 @@ footer{background:#060F19;padding:56px 40px 28px}
   padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;
   flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,.18)}
 #cookie-banner p{color:rgba(255,255,255,.8);font-size:.8rem;line-height:1.6;max-width:700px}
-#cookie-banner a{color:var(--green);text-decoration:underline}
+#cookie-banner a{color:#7DD47D;text-decoration:underline}
 .cookie-btns{display:flex;gap:10px;flex-shrink:0}
 .btn-cookie-accept{background:var(--green);color:var(--white);border:none;
   padding:8px 20px;border-radius:7px;font-family:"Poppins",sans-serif;font-size:.8rem;
@@ -265,7 +265,7 @@ footer{background:#060F19;padding:56px 40px 28px}
 /* STATS ROW */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
 .stat-item{background:var(--white);padding:28px;text-align:center}
-.stat-number{font-family:"Poppins",sans-serif;font-size:2rem;font-weight:800;color:var(--green)}
+.stat-number{font-family:"Poppins",sans-serif;font-size:2rem;font-weight:800;color:var(--green-text)}
 .stat-label{color:var(--muted);font-size:.8rem;margin-top:4px}
 
 /* QUOTE FORM (multi-step) */
@@ -320,7 +320,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
 .q-opt.sel .q-opt-box::after{content:"";display:block;width:10px;height:7px;
   border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
 .q-opt-text{font-size:.85rem;font-weight:500;color:var(--text)}
-.q-opt.sel .q-opt-text{color:var(--green);font-weight:600}
+.q-opt.sel .q-opt-text{color:var(--green-text);font-weight:600}
 .q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:12px}
 .q-hint{font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px}
 .q-error{background:#FEF2F2;border:1px solid #FECACA;color:#B91C1C;
@@ -329,7 +329,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
   border-radius:10px;padding:18px;margin-bottom:20px}
 .qs-row{display:flex;justify-content:space-between;font-size:.83rem;padding:4px 0;
   border-bottom:1px solid rgba(92,184,92,.15)}
-.qs-row:last-child{border-bottom:none;font-weight:700;color:var(--green);
+.qs-row:last-child{border-bottom:none;font-weight:700;color:var(--green-text);
   padding-top:10px;font-size:.9rem}
 .qs-label{color:var(--muted)}
 .qs-value{color:var(--navy);font-weight:600;text-align:right}
@@ -524,7 +524,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
 .city-card:hover{border-color:var(--green);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .city-name{font-family:Poppins,sans-serif;font-weight:800;font-size:1rem;color:var(--navy);margin-bottom:6px}
 .city-sub{font-size:.74rem;color:var(--muted);line-height:1.6;margin-bottom:10px}
-.city-cta{display:inline-block;font-size:.74rem;font-weight:700;color:var(--green);text-decoration:none}
+.city-cta{display:inline-block;font-size:.74rem;font-weight:700;color:var(--green-text);text-decoration:none}
 .city-cta:hover{color:var(--navy)}
 @media(max-width:1024px){#service-area .container>div:nth-child(2){grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){#service-area .container>div:nth-child(2){grid-template-columns:repeat(2,1fr)}}
@@ -573,7 +573,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
   <a href="/blog" onclick="toggleMenu()">Blog</a>
   <a href="/contact" onclick="toggleMenu()">Contact</a>
   <a href="tel:+14377811769" style="color:var(--blue)">(437) 781-1769</a>
-  <a href="/quote" onclick="toggleMenu()" style="color:var(--green);font-weight:800">Get Free Quote</a>
+  <a href="/quote" onclick="toggleMenu()" style="color:var(--green-text);font-weight:800">Get Free Quote</a>
 </div>
 
 <!-- HERO -->
@@ -631,7 +631,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
       <div class="qe-out" aria-live="polite"><span id="qe-label">Estimated monthly cost</span><strong id="qe-range">—</strong></div>
       <a id="qe-go" href="/quote" class="btn-primary qe-btn">Get my exact quote &rsaquo;</a>
     </div>
-    <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px">Ballpark only, before HST. Need more detail? Try the <a href="/cleaning-cost-estimator" style="color:var(--green);font-weight:700">full cost estimator</a>.</p>
+    <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px">Ballpark only, before HST. Need more detail? Try the <a href="/cleaning-cost-estimator" style="color:var(--green-text);font-weight:700">full cost estimator</a>.</p>
   </div>
 </section>
 <style>
@@ -893,7 +893,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
     <div id="faq-list">
       <details style="border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden">
         <summary style="padding:16px 18px;cursor:pointer;font-family:Poppins,sans-serif;font-weight:600;font-size:.9rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">How much does commercial cleaning cost in the GTA? <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-        <div style="padding:0 18px 16px;font-size:.87rem;color:var(--muted);line-height:1.7">Commercial cleaning costs in the GTA vary based on space size, frequency, and facility type. Most office cleaning contracts range from $300 to $1,500 per month. <a href="/cleaning-cost-estimator" style="color:var(--green);font-weight:600">Try our free cost estimator</a> or <a href="/quote" style="color:var(--green);font-weight:600">get your custom quote within 24 hours.</a></div>
+        <div style="padding:0 18px 16px;font-size:.87rem;color:var(--muted);line-height:1.7">Commercial cleaning costs in the GTA vary based on space size, frequency, and facility type. Most office cleaning contracts range from $300 to $1,500 per month. <a href="/cleaning-cost-estimator" style="color:var(--green-text);font-weight:600">Try our free cost estimator</a> or <a href="/quote" style="color:var(--green-text);font-weight:600">get your custom quote within 24 hours.</a></div>
       </details>
       <details style="border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden">
         <summary style="padding:16px 18px;cursor:pointer;font-family:Poppins,sans-serif;font-weight:600;font-size:.9rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">Do you offer medical office cleaning in Durham Region? <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
@@ -924,7 +924,7 @@ textarea.q-input{resize:vertical;min-height:84px;line-height:1.6}
       <p class="sec-sub" style="text-align:center;margin:0 auto 0">Shining Legacy serves offices, government facilities, healthcare networks and property managers across 8 regions of the GTA and Durham. Same professional standard, same 24-hour response time — wherever you are in the GTA.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px"><div class="city-card"><div class="city-name">Toronto</div><div class="city-sub">Downtown Toronto & Financial District &bull; North York &bull; Scarborough &bull; East York & Leaside</div><a href="/commercial-cleaning-toronto" class="city-cta">Cleaning in Toronto &rsaquo;</a></div><div class="city-card"><div class="city-name">Etobicoke</div><div class="city-sub">Rexdale &bull; Islington & Kipling &bull; Humber Valley &bull; Humber Bay Shores</div><a href="/commercial-cleaning-etobicoke" class="city-cta">Cleaning in Etobicoke &rsaquo;</a></div><div class="city-card"><div class="city-name">Mississauga</div><div class="city-sub">City Centre & Square One &bull; Meadowvale Business Park &bull; Airport Corporate Centre &bull; Heartland</div><a href="/commercial-cleaning-mississauga" class="city-cta">Cleaning in Mississauga &rsaquo;</a></div><div class="city-card"><div class="city-name">Brampton</div><div class="city-sub">Downtown Brampton &bull; Bramalea &bull; Heart Lake &bull; Springdale</div><a href="/commercial-cleaning-brampton" class="city-cta">Cleaning in Brampton &rsaquo;</a></div><div class="city-card"><div class="city-name">Vaughan</div><div class="city-sub">Vaughan Metropolitan Centre &bull; Concord &bull; Woodbridge &bull; Maple</div><a href="/commercial-cleaning-vaughan" class="city-cta">Cleaning in Vaughan &rsaquo;</a></div><div class="city-card"><div class="city-name">Markham</div><div class="city-sub">Markham Centre &bull; Unionville &bull; Cornell &bull; Milliken</div><a href="/commercial-cleaning-markham" class="city-cta">Cleaning in Markham &rsaquo;</a></div><div class="city-card"><div class="city-name">Durham Region</div><div class="city-sub">Oshawa &bull; Whitby &bull; Ajax &bull; Pickering</div><a href="/commercial-cleaning-durham-region" class="city-cta">Cleaning in Durham &rsaquo;</a></div><div class="city-card"><div class="city-name">Clarington</div><div class="city-sub">Bowmanville &bull; Courtice &bull; Newcastle &bull; Orono</div><a href="/commercial-cleaning-clarington" class="city-cta">Cleaning in Clarington &rsaquo;</a></div></div>
-    <p style="text-align:center;margin:-12px 0 24px;font-size:.88rem"><a href="/service-areas" style="color:var(--green);font-weight:700">See all service areas</a> &middot; Not listed? <a href="/contact" style="color:var(--green);font-weight:700">Ask us</a> — we may still cover you.</p>
+    <p style="text-align:center;margin:-12px 0 24px;font-size:.88rem"><a href="/service-areas" style="color:var(--green-text);font-weight:700">See all service areas</a> &middot; Not listed? <a href="/contact" style="color:var(--green-text);font-weight:700">Ask us</a> — we may still cover you.</p>
     <p style="text-align:center;font-size:.82rem;color:var(--muted);max-width:800px;margin:0 auto;line-height:1.85">
       Shining Legacy Commercial Cleaning Inc. provides professional <strong>office cleaning</strong>, <strong>janitorial services</strong>, <strong>post-construction cleanup</strong>, <strong>medical facility cleaning</strong> and <strong>industrial cleaning</strong> in <strong>Toronto</strong>, <strong>Mississauga</strong>, <strong>Brampton</strong>, <strong>Etobicoke</strong>, <strong>Vaughan</strong>, <strong>Markham</strong>, <strong>Scarborough</strong>, <strong>North York</strong>, <strong>Oshawa</strong>, <strong>Whitby</strong>, <strong>Ajax</strong>, <strong>Pickering</strong> and <strong>Clarington</strong>. Fully insured, WHMIS-compliant, available 7 days a week.
     </p>
