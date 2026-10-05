@@ -1,21 +1,141 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/$1.html", "status": 200 },
-    { "src": "/(.*)/", "dest": "/$1.html", "status": 200 }
+  "redirects": [
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.htm",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/our-services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-clean",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/book-now",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/get-a-quote",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/request-a-quote",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/areas",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/cost-estimator",
+      "destination": "/cleaning-cost-estimator",
+      "permanent": true
+    },
+    {
+      "source": "/estimator",
+      "destination": "/cleaning-cost-estimator",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-cleaning-durham",
+      "destination": "/commercial-cleaning-durham-region",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-cleaning-oshawa",
+      "destination": "/commercial-cleaning-durham-region",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-cleaning-bowmanville",
+      "destination": "/commercial-cleaning-clarington",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(favicon.ico|favicon-16x16.png|favicon-32x32.png|favicon-48x48.png|favicon-96x96.png|apple-touch-icon.png|icon-192.png|icon-512.png|icon-512-maskable.png|og-image.jpg|logo.png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/thank-you",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
       ]
     }
   ]
